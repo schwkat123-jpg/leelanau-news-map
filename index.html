@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leelanau County News Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Leelanau County, Michigan</p>
+        <h1>Summer News Map</h1>
+        <p>
+          Fresh headlines from the last 24 hours, pinned to the closest matching
+          location in Leelanau County.
+        </p>
+        <div class="hero__meta">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span id="status">Loading the latest stories...</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel" aria-labelledby="map-title">
+        <div class="panel__header">
+          <h2 id="map-title">Interactive Map</h2>
+          <p>Click a marker to open the source article.</p>
+        </div>
+        <div id="map" role="application" aria-label="Map of Leelanau County"></div>
+      </section>
+
+      <aside class="panel panel--list" aria-labelledby="list-title">
+        <div class="panel__header">
+          <h2 id="list-title">Recent Headlines</h2>
+          <p>Locations are estimated from article text and local place names.</p>
+        </div>
+        <div id="headline-list" class="headline-list"></div>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Data source: GDELT 2.1. Geocoding powered by OpenStreetMap Nominatim.
+      </p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="app.js"></script>
+  </body>
+</html>
